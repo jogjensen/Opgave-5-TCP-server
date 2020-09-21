@@ -49,6 +49,8 @@ namespace BikeServer
 
             if (str == "HentAlle")
             {
+                sw.WriteLine($"Bikes in list: ");
+                Console.WriteLine($"Cykler i listen: ");
                 foreach (var bikes in bikes) sw.WriteLine(bikes);
                 foreach (var bikes in bikes)
                 {
@@ -59,9 +61,10 @@ namespace BikeServer
             else if (str == "Hent")
             {
                 Console.WriteLine("Skriv ID'et på den cykel du ønsker at hente: ");
-                sw.WriteLine("Skriv ID'et på den cykel du ønsker at hente: ");
+                sw.WriteLine("Write the ID:  ");
 
-                
+                sw.Flush();
+
                 var str2 = sr.ReadLine();
                 var i = int.Parse(str2);
 

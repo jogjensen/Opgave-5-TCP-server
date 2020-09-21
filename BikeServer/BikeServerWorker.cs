@@ -44,7 +44,8 @@ namespace BikeServer
             var sw = new StreamWriter(socket.GetStream());
 
             var str = sr.ReadLine();
-            Console.WriteLine($"Her er server input: {str}");
+           // var str2 = sr.ReadLine();
+            Console.WriteLine($"Her er server input: {str} og ");
 
             if (str == "HentAlle")
             {
@@ -52,14 +53,13 @@ namespace BikeServer
             }
             else if (str == "Hent")
             {
-                var id = sr.ReadLine();
-
-                var i = int.Parse(id);
-
+                var i = int.Parse(str);
+                
 
                 var b = bikes.FirstOrDefault(bikes => bikes.Id == i);
 
                 sw.WriteLine(b);
+                Console.WriteLine(b);
             }
 
             sw.Flush();

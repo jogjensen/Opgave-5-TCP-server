@@ -50,17 +50,28 @@ namespace BikeServer
             if (str == "HentAlle")
             {
                 foreach (var bikes in bikes) sw.WriteLine(bikes);
+                foreach (var bikes in bikes)
+                {
+                    Console.WriteLine(bikes);
+                }
+                
             }
             else if (str == "Hent")
             {
-                var i = int.Parse(str);
+                Console.WriteLine("Skriv ID'et på den cykel du ønsker at hente: ");
+                sw.WriteLine("Skriv ID'et på den cykel du ønsker at hente: ");
+
                 
+                var str2 = sr.ReadLine();
+                var i = int.Parse(str2);
+
 
                 var b = bikes.FirstOrDefault(bikes => bikes.Id == i);
 
                 sw.WriteLine(b);
                 Console.WriteLine(b);
             }
+           
 
             sw.Flush();
         }

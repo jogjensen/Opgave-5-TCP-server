@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BikeServer
 {
-    public class Bikes
+    public class Bike
     {
         #region Instance fields
         private static int _idAuto = 1;
@@ -17,7 +17,7 @@ namespace BikeServer
 
 
         #region Constructors
-        public Bikes(string color, int price, int gear, bool mtb)
+        public Bike(string color, int price, int gear, bool mtb)
         {
             _id = _idAuto++;
             _color = color;
@@ -26,7 +26,7 @@ namespace BikeServer
             _mtb = mtb;
         }
 
-        public Bikes()
+        public Bike()
         {
         }
         #endregion

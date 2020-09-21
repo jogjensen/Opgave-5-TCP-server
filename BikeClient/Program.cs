@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace BikeServer
+namespace BikeClient
 {
     class Program
     {
         static void Main(string[] args)
         {
-            BikeServerWorker worker = new BikeServerWorker();
+            BikeClient worker = new BikeClient();
 
             worker.Start();
 

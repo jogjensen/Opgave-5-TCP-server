@@ -27,14 +27,18 @@ namespace BikeServer
         {
             var server = new TcpListener(IPAddress.Loopback, 4646);
             server.Start();
-            var socket = server.AcceptTcpClient();
 
             while (true)
+            {
+                var socket = server.AcceptTcpClient();
+
+
                 Task.Run(() =>
                 {
                     var tempSocket = socket;
                     doClient(tempSocket);
                 });
+            }
         }
 
 
@@ -44,8 +48,7 @@ namespace BikeServer
             var sw = new StreamWriter(socket.GetStream());
 
             var str = sr.ReadLine();
-           // var str2 = sr.ReadLine();
-            Console.WriteLine($"Her er server input: {str} og ");
+            Console.WriteLine($"Her er server input: {str}");
 
             if (str == "HentAlle")
             {
@@ -65,7 +68,8 @@ namespace BikeServer
 
                 sw.Flush();
 
-                var str2 = sr.ReadLine();
+                string str2;
+                str2 = sr.ReadLine();
                 var i = int.Parse(str2);
 
 

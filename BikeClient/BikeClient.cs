@@ -1,8 +1,11 @@
-﻿using System;
+﻿using BikeServer;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace BikeClient
 {
@@ -17,13 +20,16 @@ namespace BikeClient
             StreamReader sr = new StreamReader(socket.GetStream());
             StreamWriter sw = new StreamWriter(socket.GetStream());
 
+            Bike bike = new Bike("Yellow",1000,10,true);
 
-            String strSomSendes = "HentAlle";
-            sw.WriteLine(strSomSendes);
+            String json = JsonConvert.SerializeObject(bike);
+
+            sw.WriteLine("Gem");
+            sw.WriteLine(json);
+
             sw.Flush();
 
-            String strRetur = sr.ReadLine();
-            Console.WriteLine($"Tilbage fra Server : {strRetur}");
+            
 
 
         }

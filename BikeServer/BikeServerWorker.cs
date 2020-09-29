@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace BikeServer
 {
@@ -77,6 +79,16 @@ namespace BikeServer
 
                 sw.WriteLine(b);
                 Console.WriteLine(b);
+            }
+            else if (str == "Gem")
+            {
+                string str3;
+                str3 = sr.ReadLine();
+                Bike bike = JsonConvert.DeserializeObject<Bike>(str3);
+
+                Console.WriteLine("Saved bike as json: " + bike);
+                Console.WriteLine("Saved bike as json: " + str3 );
+                sw.WriteLine("Saved bike as json: " + str3);
             }
            
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeServer", "BikeServer\BikeServer.csproj", "{C3229D4C-5CCF-48F2-8858-024185F3CE39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientBike", "BikeClient\ClientBike.csproj", "{B1ACA4DA-FDE0-47C6-995D-F85CA048B014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientBike", "BikeClient\ClientBike.csproj", "{B1ACA4DA-FDE0-47C6-995D-F85CA048B014}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

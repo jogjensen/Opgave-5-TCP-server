@@ -66,10 +66,12 @@ namespace BikeServer
 
 
         #region Methods
+
         public override string ToString()
         {
-            return $"{nameof(_id)}: {_id}, {nameof(_color)}: {_color}, {nameof(_price)}: {_price}, {nameof(_gear)}: {_gear}, {nameof(_mtb)}: {_mtb}";
+            return $"{nameof(Id)}: {Id}, {nameof(Color)}: {Color}, {nameof(Price)}: {Price}, {nameof(Gear)}: {Gear}, {nameof(Mtb)}: {Mtb}";
         }
+
         #endregion
 
 
